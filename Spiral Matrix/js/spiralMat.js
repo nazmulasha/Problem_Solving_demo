@@ -1,4 +1,6 @@
-var spiralOrder = function(matrix){
+
+
+export var spiralOrder = function(matrix){
     var res=[],r=matrix.length,i,j,c;
     if(r==0)
       return res;
