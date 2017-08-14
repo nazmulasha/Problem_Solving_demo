@@ -10,20 +10,20 @@ var spiralOrder = function(matrix){
     for(i=0;i<=r;i++)
     {
         for(j=0;j<=c;j++)
-            visited[i][j]=0;
+            visited[i][j]=0; //every blocks are undiscovered
     }
-    var dir = 'r';
+    var dir = 'r';//direction-left,right,up or down,initially right
     i=0,j=0;
     while (cnt--) {
-        res.push(matrix[i][j]);
-        visited[i][j]=true;
+        res.push(matrix[i][j]);//store the current block
+        visited[i][j]=true;//discovered
         if(dir=='r')
         {
           j++;
           if(j==c || visited[i][j])
           {
               j--,i++;
-              dir = 'd';
+              dir = 'd';//change the direction
           }
         }
         else if(dir == 'd')
@@ -53,5 +53,5 @@ var spiralOrder = function(matrix){
             }
         }
     }
-    return res;
+    return res;//res contains the result
 };
